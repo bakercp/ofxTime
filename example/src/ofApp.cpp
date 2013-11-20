@@ -97,42 +97,46 @@ void ofApp::draw()
 {
     ofBackground(0);
 
-
-
+    // get the screen Y values of range1
     float y0 = ofMap(range1.getMinimum().utcTime(), range0.getMinimum().utcTime(), range0.getMaximum().utcTime(), 0, ofGetHeight());
     float y1 = ofMap(range1.getMaximum().utcTime(), range0.getMinimum().utcTime(), range0.getMaximum().utcTime(), 0, ofGetHeight());
 
+    // draw range0
     ofFill();
     ofSetColor(ofColor::yellow);
     ofRect(0, 0, ofGetWidth() / 4, ofGetHeight());
 
+    // draw range1
     ofFill();
     ofSetColor(ofColor::red);
     ofRect(0, y0, ofGetWidth() / 4, y1 - y0);
 
-
+    // get the range boundaries as formatted strings
     std::string range0Min = Poco::DateTimeFormatter::format(range0.getMinimum(), Poco::DateTimeFormat::RFC1036_FORMAT);
     std::string range0Max = Poco::DateTimeFormatter::format(range0.getMaximum(), Poco::DateTimeFormat::RFC1036_FORMAT);
     std::string range1Min = Poco::DateTimeFormatter::format(range1.getMinimum(), Poco::DateTimeFormat::RFC1036_FORMAT);
     std::string range1Max = Poco::DateTimeFormatter::format(range1.getMaximum(), Poco::DateTimeFormat::RFC1036_FORMAT);
 
+    // draw the range boundaries
     ofDrawBitmapStringHighlight(range0Min, ofVec2f(ofGetWidth() / 4, + 14));
     ofDrawBitmapStringHighlight(range0Max, ofVec2f(ofGetWidth() / 4, ofGetHeight()));
     ofDrawBitmapStringHighlight(range1Min, ofVec2f(ofGetWidth() / 4, y0));
     ofDrawBitmapStringHighlight(range1Max, ofVec2f(ofGetWidth() / 4, y1));
 
-
+    // draw a line based on the cursor position
     ofSetColor(0,255,0);
     ofLine(0, ofGetMouseY(), ofGetWidth(), ofGetMouseY());
 
+    // calculate the noramlized cursor position
     float normalizedMousePosition = ofGetMouseY() / (float)ofGetHeight();
 
+    // use the range0's lerp function to interpolate the date under the mouse
     Poco::Timestamp ts = range0.lerp(normalizedMousePosition);
 
+    // formate the interpolated date to a string
     std::string ts0 = Poco::DateTimeFormatter::format(ts, Poco::DateTimeFormat::RFC1036_FORMAT);
 
+    // draw the interpolated date
     ofDrawBitmapStringHighlight(ts0, ofVec2f(ofGetWidth() / 4, ofGetMouseY()));
-
-
 
 }
