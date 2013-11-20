@@ -86,7 +86,6 @@
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
-		FD10CFAD183C29E1003D5140 /* ofRange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofRange.h; sourceTree = "<group>"; };
 		a9c510e9ad5eedef3eb0c75faa9bd5eb /* Range.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Range.cpp; path = ../../../addons/ofxTime/libs/ofxTime/src/Range.cpp; sourceTree = SOURCE_ROOT; };
 		feeeeece3c65ca4f0b66606ed1fd80c9 /* ofxTime.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxTime.h; path = ../../../addons/ofxTime/src/ofxTime.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -147,7 +146,6 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				FD10CFAA183C29E1003D5140 /* ofxRange */,
 				e580da17dac1e2210aa6bb6afbc77a9b /* ofxTime */,
 			);
 			name = addons;
@@ -230,23 +228,6 @@
 				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
 			);
 			name = openFrameworks;
-			sourceTree = "<group>";
-		};
-		FD10CFAA183C29E1003D5140 /* ofxRange */ = {
-			isa = PBXGroup;
-			children = (
-				FD10CFAC183C29E1003D5140 /* src */,
-			);
-			name = ofxRange;
-			path = ../../ofxRange;
-			sourceTree = "<group>";
-		};
-		FD10CFAC183C29E1003D5140 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				FD10CFAD183C29E1003D5140 /* ofRange.h */,
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 		cef17e9e6c28478748b8d76cdab358ae /* Time */ = {
