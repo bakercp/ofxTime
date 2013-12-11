@@ -30,4 +30,6 @@
 #include "Poco/DateTimeFormatter.h"
 #include "Poco/DateTimeParser.h"
 #include "Poco/LocalDateTime.h"
-#include "ofx/Time/Range.h"
+#include "ofx/Time/Interval.h"
+#include "ofx/Time/Period.h"
+#include "ofx/Time/Utils.h"
