@@ -1,0 +1,506 @@
+\hypertarget{classofx_1_1_time_1_1_utils}{\section{ofx\-:\-:Time\-:\-:Utils Class Reference}
+\label{classofx_1_1_time_1_1_utils}\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}}
+}
+
+
+{\ttfamily \#include $<$Utils.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} \{ \\*
+\hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a1b374403497467803d0f39676f0f40d0}{M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D}, 
+\hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a3a3c031b2222608dcce148fdecedd6a0}{M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D}, 
+\hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112aa0dd1944b7a5db923dfb56e1895996f5}{S\-E\-C\-O\-N\-D}, 
+\hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112ad14cd310c74b7e2cd48481805f90450c}{M\-I\-N\-U\-T\-E}, 
+\\*
+\hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a5c5879286ab99b122c9232906b6e73e8}{H\-O\-U\-R}, 
+\hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a9cdbc0bc6e0d800a0774fb6fe405074d}{D\-A\-Y}, 
+\hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a17e629da2d58085979de3088efd003dc}{W\-E\-E\-K}, 
+\hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a050ac18f91688a99b8a1bb51a6e62974}{M\-O\-N\-T\-H}, 
+\\*
+\hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112af4a68958f2b22b8c68820cde9a5b854f}{Y\-E\-A\-R}
+ \}
+\begin{DoxyCompactList}\small\item\em $<$ Symbolic names of Poco\-::\-Date\-Time fields for manipulating dates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\-::vector\\*
+$<$ Poco\-::\-Timestamp $>$ \hyperlink{classofx_1_1_time_1_1_utils_acd07a3c4b5eba6fedf1a2c744a66ac6a}{get\-Instances} (const Poco\-::\-Timestamp \&start, std\-::size\-\_\-t num\-Instances, Poco\-::\-Timestamp\-::\-Time\-Diff amount, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)
+\item 
+static std\-::vector\\*
+$<$ Poco\-::\-Timestamp $>$ \hyperlink{classofx_1_1_time_1_1_utils_a7d48dcb41c6f936a7c8d2c45e23684b7}{get\-Instances} (const Poco\-::\-Timestamp \&start, const Poco\-::\-Timespan \&timespan, Poco\-::\-Timestamp\-::\-Time\-Diff amount, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)
+\item 
+static std\-::vector\\*
+$<$ Poco\-::\-Timestamp $>$ \hyperlink{classofx_1_1_time_1_1_utils_ae91b9a0148df1a02b16be045c793b944}{get\-Instances} (const Poco\-::\-Timestamp \&start, const Poco\-::\-Timestamp \&end, Poco\-::\-Timestamp\-::\-Time\-Diff amount, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)
+\item 
+static std\-::vector\\*
+$<$ Poco\-::\-Timestamp $>$ \hyperlink{classofx_1_1_time_1_1_utils_aadd395d70f52dcfbd655baee45dc33ed}{get\-Instances} (const \hyperlink{classofx_1_1_time_1_1_range}{Range} \&range, Poco\-::\-Timestamp\-::\-Time\-Diff amount, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)
+\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a9e1c01fc626b4cf7f0c8f145b8ac7ff6}{static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_a9e1c01fc626b4cf7f0c8f145b8ac7ff6}{to\-Utc\-Timestamp} (const Poco\-::\-Local\-Date\-Time \&local\-Date\-Time)}\label{classofx_1_1_time_1_1_utils_a9e1c01fc626b4cf7f0c8f145b8ac7ff6}
+
+\begin{DoxyCompactList}\small\item\em Converts a Poco\-::\-Local\-Date\-Time to its U\-T\-C Poco\-::\-Timestamp equivalent. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a69ea2e034f118c86ce9320f0e7ac4687}{static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a69ea2e034f118c86ce9320f0e7ac4687}{to\-Utc\-Date\-Time} (const Poco\-::\-Local\-Date\-Time \&local\-Date\-Time)}\label{classofx_1_1_time_1_1_utils_a69ea2e034f118c86ce9320f0e7ac4687}
+
+\begin{DoxyCompactList}\small\item\em Converts a Poco\-::\-Local\-Date\-Time to its U\-T\-C Poco\-::\-Date\-Time equivalent. \end{DoxyCompactList}\item 
+static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a49643912f45b75cba987558da3b8a11b}{add} (const Poco\-::\-Local\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)
+\item 
+static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_abfffcae455ab383642fd887460cc4a4e}{add} (const Poco\-::\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)
+\item 
+static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_a827ea2e2a78e2809a4b4266825125ea5}{add} (const Poco\-::\-Timestamp \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)
+\item 
+static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a99e52f0d722ba14d6ebb5553cb2439b7}{add\-Microseconds} (const Poco\-::\-Local\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a61ea72a0a84a7c96587163b9e99d6907}{add\-Microseconds} (const Poco\-::\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_a47a051310480cc97f0ce8f8f1f91905b}{add\-Microseconds} (const Poco\-::\-Timestamp \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_ab04b1cb52c1ba6883be94aee0279670b}{add\-Milliseconds} (const Poco\-::\-Local\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a8c12f8f2dd330272b545ff71be2bb59d}{add\-Milliseconds} (const Poco\-::\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_aadbe39e1fccd2918dc0cd3e7c16c54bb}{add\-Milliseconds} (const Poco\-::\-Timestamp \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_ab4b4f749bc46f83a49775d800e3b259e}{add\-Seconds} (const Poco\-::\-Local\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a0c81c35f4d7e222608c532c8928e7ad1}{add\-Seconds} (const Poco\-::\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_a636103746891f05134bf42285f74f4dc}{add\-Seconds} (const Poco\-::\-Timestamp \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_ac5d0aae917881add18dc72c11f149819}{add\-Minutes} (const Poco\-::\-Local\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a43e5387cdfda3a2bd6c1b62253e8c377}{add\-Minutes} (const Poco\-::\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_a0b8651b154d7c4d732b613483ce00c69}{add\-Minutes} (const Poco\-::\-Timestamp \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_ac3835661b0039cd3e7533b11a97d5a86}{add\-Hours} (const Poco\-::\-Local\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a40643c203093f6ca4d8ef46a6fac5606}{add\-Hours} (const Poco\-::\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_a8589788e12fc419a8c9a72a1b84c0c67}{add\-Hours} (const Poco\-::\-Timestamp \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a528f095e1d5f6034ce4ef002d75319b3}{add\-Days} (const Poco\-::\-Local\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_ab58d2bde2402e0687028aa78100f2b25}{add\-Days} (const Poco\-::\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_a156e3294d8ca20599da46fc725444994}{add\-Days} (const Poco\-::\-Timestamp \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a0ae2cc5bd1ea9d1ca19fbaa3b56fffa1}{add\-Weeks} (const Poco\-::\-Local\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a0084c244ea63702a498144686de5a477}{add\-Weeks} (const Poco\-::\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_a015f9341a146f6f26b5c6e861bf3ed24}{add\-Weeks} (const Poco\-::\-Timestamp \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_ad092f0c788c0e2252579547707149f72}{add\-Months} (const Poco\-::\-Local\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a770c756c1dc55365113452ea9c5774f9}{add\-Months} (const Poco\-::\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_a97ac78b827ea795d0a812b04739defbb}{add\-Months} (const Poco\-::\-Timestamp \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a650e36e4834b7893e86af813b12aec79}{add\-Years} (const Poco\-::\-Local\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_aa6bd242fcfbd53e80c2a2301b7a54e14}{add\-Years} (const Poco\-::\-Date\-Time \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_a43949aedd840364f84c779c52af85e1e}{add\-Years} (const Poco\-::\-Timestamp \&time, Poco\-::\-Timestamp\-::\-Time\-Diff amount)
+\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a142fdc5004bf5e44993480949cf5e2ae}{static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a142fdc5004bf5e44993480949cf5e2ae}{round} (const Poco\-::\-Local\-Date\-Time \&local\-Date\-Time, const Poco\-::\-Timespan \&timespan)}\label{classofx_1_1_time_1_1_utils_a142fdc5004bf5e44993480949cf5e2ae}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Local\-Date\-Time based on a given Poco\-::\-Timespan. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a7be8c358a657067c2a24e398403487a2}{static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a7be8c358a657067c2a24e398403487a2}{ceiling} (const Poco\-::\-Local\-Date\-Time \&local\-Date\-Time, const Poco\-::\-Timespan \&timespan)}\label{classofx_1_1_time_1_1_utils_a7be8c358a657067c2a24e398403487a2}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Local\-Date\-Time up based on a given Poco\-::\-Timespan. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a8ec56a3c71d4598ec610b6a51a3d814a}{static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a8ec56a3c71d4598ec610b6a51a3d814a}{floor} (const Poco\-::\-Local\-Date\-Time \&local\-Date\-Time, const Poco\-::\-Timespan \&timespan)}\label{classofx_1_1_time_1_1_utils_a8ec56a3c71d4598ec610b6a51a3d814a}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Local\-Date\-Time down based on a given Poco\-::\-Timespan. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a948c7dca6596bd4689fd0602af7091d9}{static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a948c7dca6596bd4689fd0602af7091d9}{round} (const Poco\-::\-Date\-Time \&date\-Time, const Poco\-::\-Timespan \&timespan)}\label{classofx_1_1_time_1_1_utils_a948c7dca6596bd4689fd0602af7091d9}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Date\-Time based on a given Poco\-::\-Timespan. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a1b4f279a95269b0318928e89371e3174}{static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a1b4f279a95269b0318928e89371e3174}{ceiling} (const Poco\-::\-Date\-Time \&date\-Time, const Poco\-::\-Timespan \&timespan)}\label{classofx_1_1_time_1_1_utils_a1b4f279a95269b0318928e89371e3174}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Date\-Time up based on a given Poco\-::\-Timespan. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_ac06d1221c0aec6f51b7408e3d2d4a8c6}{static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_ac06d1221c0aec6f51b7408e3d2d4a8c6}{floor} (const Poco\-::\-Date\-Time \&date\-Time, const Poco\-::\-Timespan \&timespan)}\label{classofx_1_1_time_1_1_utils_ac06d1221c0aec6f51b7408e3d2d4a8c6}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Date\-Time down based on a given Poco\-::\-Timespan. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a8532e3d23e41864c09c835b83431b677}{static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_a8532e3d23e41864c09c835b83431b677}{round} (const Poco\-::\-Timestamp \&timestamp, const Poco\-::\-Timespan \&timespan)}\label{classofx_1_1_time_1_1_utils_a8532e3d23e41864c09c835b83431b677}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Timestamp based on a given Poco\-::\-Timespan. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_aa7997196c9fdec7964bf3b987001e324}{static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_aa7997196c9fdec7964bf3b987001e324}{ceiling} (const Poco\-::\-Timestamp \&timestamp, const Poco\-::\-Timespan \&timespan)}\label{classofx_1_1_time_1_1_utils_aa7997196c9fdec7964bf3b987001e324}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Timestamp up based on a given Poco\-::\-Timespan. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_ac26ac2bd0091ef78fa1c2469b37eded2}{static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_ac26ac2bd0091ef78fa1c2469b37eded2}{floor} (const Poco\-::\-Timestamp \&timestamp, const Poco\-::\-Timespan \&timespan)}\label{classofx_1_1_time_1_1_utils_ac26ac2bd0091ef78fa1c2469b37eded2}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Timestamp down based on a given Poco\-::\-Timespan. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a46b9183851661ffd3b8c986edb768d70}{static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a46b9183851661ffd3b8c986edb768d70}{round} (const Poco\-::\-Local\-Date\-Time \&local\-Date\-Time, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)}\label{classofx_1_1_time_1_1_utils_a46b9183851661ffd3b8c986edb768d70}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Local\-Date\-Time based on a given Date\-Time\-Field. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_abe2a0f4939d2f2dbec1e32b65d53703c}{static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_abe2a0f4939d2f2dbec1e32b65d53703c}{ceiling} (const Poco\-::\-Local\-Date\-Time \&local\-Date\-Time, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)}\label{classofx_1_1_time_1_1_utils_abe2a0f4939d2f2dbec1e32b65d53703c}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Local\-Date\-Time up based on a given Date\-Time\-Field. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a86b2329f6c9e8c8c60294bc502d93804}{static Poco\-::\-Local\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a86b2329f6c9e8c8c60294bc502d93804}{floor} (const Poco\-::\-Local\-Date\-Time \&local\-Date\-Time, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)}\label{classofx_1_1_time_1_1_utils_a86b2329f6c9e8c8c60294bc502d93804}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Local\-Date\-Time down based on a given Date\-Time\-Field. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a8fedb54f4e8a43405dca7c56ba49798f}{static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a8fedb54f4e8a43405dca7c56ba49798f}{round} (const Poco\-::\-Date\-Time \&date\-Time, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)}\label{classofx_1_1_time_1_1_utils_a8fedb54f4e8a43405dca7c56ba49798f}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Date\-Time based on a given Date\-Time\-Field. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a5a411b1d4d967a444b59d91c0d37f7fa}{static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a5a411b1d4d967a444b59d91c0d37f7fa}{ceiling} (const Poco\-::\-Date\-Time \&date\-Time, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)}\label{classofx_1_1_time_1_1_utils_a5a411b1d4d967a444b59d91c0d37f7fa}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Date\-Time up based on a given Date\-Time\-Field. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a6e496a915b1624b41ba9eee161bcca02}{static Poco\-::\-Date\-Time \hyperlink{classofx_1_1_time_1_1_utils_a6e496a915b1624b41ba9eee161bcca02}{floor} (const Poco\-::\-Date\-Time \&date\-Time, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)}\label{classofx_1_1_time_1_1_utils_a6e496a915b1624b41ba9eee161bcca02}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Date\-Time down based on a given Date\-Time\-Field. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_aab9c5ac41cc8fee9a1aec6ae39309260}{static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_aab9c5ac41cc8fee9a1aec6ae39309260}{round} (const Poco\-::\-Timestamp \&timestamp, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)}\label{classofx_1_1_time_1_1_utils_aab9c5ac41cc8fee9a1aec6ae39309260}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Timestamp based on a given Date\-Time\-Field. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a3cc7e578bbf2bad7c3405ee1d10e81de}{static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_a3cc7e578bbf2bad7c3405ee1d10e81de}{ceiling} (const Poco\-::\-Timestamp \&timestamp, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)}\label{classofx_1_1_time_1_1_utils_a3cc7e578bbf2bad7c3405ee1d10e81de}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Timestamp up based on a given Date\-Time\-Field. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_af265609987c742f685dd29d936e3bd82}{static Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_utils_af265609987c742f685dd29d936e3bd82}{floor} (const Poco\-::\-Timestamp \&timestamp, \hyperlink{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{Date\-Time\-Field} field)}\label{classofx_1_1_time_1_1_utils_af265609987c742f685dd29d936e3bd82}
+
+\begin{DoxyCompactList}\small\item\em Rounds a Poco\-::\-Timestamp down based on a given Date\-Time\-Field. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_ad23f10fcfa1361cace0a26bc9252600e}{static int \hyperlink{classofx_1_1_time_1_1_utils_ad23f10fcfa1361cace0a26bc9252600e}{count\-Leap\-Days\-Between\-Years} (int start\-Year, int end\-Year)}\label{classofx_1_1_time_1_1_utils_ad23f10fcfa1361cace0a26bc9252600e}
+
+\begin{DoxyCompactList}\small\item\em Counts the number of leap days between two years. The start year must be greater than the end year. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_utils_a3584234533532b25363feee40bbb187b}{static int \hyperlink{classofx_1_1_time_1_1_utils_a3584234533532b25363feee40bbb187b}{count\-Leap\-Days\-Before\-Year} (int year)}\label{classofx_1_1_time_1_1_utils_a3584234533532b25363feee40bbb187b}
+
+\begin{DoxyCompactList}\small\item\em Counts the number of leap days since year 0 (zero). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+$<$ This class contains a collection of utilities for manipulating Poco\-::\-Date\-Time, Poco\-::\-Local\-Date\-Time and Poco\-::\-Timestamp.
+
+Rounding dates and times is timezone dependent. When dates and times must be rounded with respect to a specific timezone, the Poco\-::\-Timestamp or Poco\-::\-Date\-Time should be converted to a Poco\-::\-Local\-Date\-Time before rounding. The U\-T\-C equivalent of a Poco\-::\-Local\-Date\-Time can then be extracted using the \hyperlink{classofx_1_1_time_1_1_utils_a9e1c01fc626b4cf7f0c8f145b8ac7ff6}{to\-Utc\-Timestamp()} or \hyperlink{classofx_1_1_time_1_1_utils_a69ea2e034f118c86ce9320f0e7ac4687}{to\-Utc\-Date\-Time()} functions.
+
+Notes\-:
+\begin{DoxyItemize}
+\item Negative years (years preceding 1 B\-C) are not supported, thus \char`\"{}truncation\char`\"{} (floor toward zero) is not supported.
+\end{DoxyItemize}
+
+For more information, please see\-:
+\begin{DoxyItemize}
+\item \href{http://pocoproject.org/docs/Poco.Timestamp.html}{\tt http\-://pocoproject.\-org/docs/\-Poco.\-Timestamp.\-html}
+\item \href{http://pocoproject.org/docs/Poco.DateTime.html}{\tt http\-://pocoproject.\-org/docs/\-Poco.\-Date\-Time.\-html}
+\item \href{http://pocoproject.org/docs/Poco.LocalDateTime.html}{\tt http\-://pocoproject.\-org/docs/\-Poco.\-Local\-Date\-Time.\-html} 
+\end{DoxyItemize}
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!Date\-Time\-Field@{Date\-Time\-Field}}
+\index{Date\-Time\-Field@{Date\-Time\-Field}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{Date\-Time\-Field}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf ofx\-::\-Time\-::\-Utils\-::\-Date\-Time\-Field}}}\label{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112}
+
+
+$<$ Symbolic names of Poco\-::\-Date\-Time fields for manipulating dates. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D@{M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D}!ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}}\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D@{M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D}}\item[{\em 
+\hypertarget{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a1b374403497467803d0f39676f0f40d0}{M\-I\-C\-R\-O\-S\-E\-C\-O\-N\-D}\label{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a1b374403497467803d0f39676f0f40d0}
+}]The microsecond field. \index{M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D@{M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D}!ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}}\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D@{M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D}}\item[{\em 
+\hypertarget{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a3a3c031b2222608dcce148fdecedd6a0}{M\-I\-L\-L\-I\-S\-E\-C\-O\-N\-D}\label{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a3a3c031b2222608dcce148fdecedd6a0}
+}]The millisecond field. \index{S\-E\-C\-O\-N\-D@{S\-E\-C\-O\-N\-D}!ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}}\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!S\-E\-C\-O\-N\-D@{S\-E\-C\-O\-N\-D}}\item[{\em 
+\hypertarget{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112aa0dd1944b7a5db923dfb56e1895996f5}{S\-E\-C\-O\-N\-D}\label{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112aa0dd1944b7a5db923dfb56e1895996f5}
+}]The second field. \index{M\-I\-N\-U\-T\-E@{M\-I\-N\-U\-T\-E}!ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}}\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!M\-I\-N\-U\-T\-E@{M\-I\-N\-U\-T\-E}}\item[{\em 
+\hypertarget{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112ad14cd310c74b7e2cd48481805f90450c}{M\-I\-N\-U\-T\-E}\label{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112ad14cd310c74b7e2cd48481805f90450c}
+}]The minute field. \index{H\-O\-U\-R@{H\-O\-U\-R}!ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}}\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!H\-O\-U\-R@{H\-O\-U\-R}}\item[{\em 
+\hypertarget{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a5c5879286ab99b122c9232906b6e73e8}{H\-O\-U\-R}\label{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a5c5879286ab99b122c9232906b6e73e8}
+}]The hour field. \index{D\-A\-Y@{D\-A\-Y}!ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}}\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!D\-A\-Y@{D\-A\-Y}}\item[{\em 
+\hypertarget{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a9cdbc0bc6e0d800a0774fb6fe405074d}{D\-A\-Y}\label{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a9cdbc0bc6e0d800a0774fb6fe405074d}
+}]The day field. \index{W\-E\-E\-K@{W\-E\-E\-K}!ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}}\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!W\-E\-E\-K@{W\-E\-E\-K}}\item[{\em 
+\hypertarget{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a17e629da2d58085979de3088efd003dc}{W\-E\-E\-K}\label{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a17e629da2d58085979de3088efd003dc}
+}]The week increment field. \index{M\-O\-N\-T\-H@{M\-O\-N\-T\-H}!ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}}\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!M\-O\-N\-T\-H@{M\-O\-N\-T\-H}}\item[{\em 
+\hypertarget{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a050ac18f91688a99b8a1bb51a6e62974}{M\-O\-N\-T\-H}\label{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112a050ac18f91688a99b8a1bb51a6e62974}
+}]The month field. \index{Y\-E\-A\-R@{Y\-E\-A\-R}!ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}}\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!Y\-E\-A\-R@{Y\-E\-A\-R}}\item[{\em 
+\hypertarget{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112af4a68958f2b22b8c68820cde9a5b854f}{Y\-E\-A\-R}\label{classofx_1_1_time_1_1_utils_aaab0e5bd305761231f063a0701785112af4a68958f2b22b8c68820cde9a5b854f}
+}]The year field. \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classofx_1_1_time_1_1_utils_a49643912f45b75cba987558da3b8a11b}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add@{add}}
+\index{add@{add}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Local\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Local\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount, }
+\item[{{\bf Date\-Time\-Field}}]{field}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a49643912f45b75cba987558da3b8a11b}
+Add an arbitrary amount to the given Date\-Time\-Field of a Poco\-::\-Local\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_abfffcae455ab383642fd887460cc4a4e}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add@{add}}
+\index{add@{add}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount, }
+\item[{{\bf Date\-Time\-Field}}]{field}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_abfffcae455ab383642fd887460cc4a4e}
+Add an arbitrary amount to the given Date\-Time\-Field of a Poco\-::\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a827ea2e2a78e2809a4b4266825125ea5}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add@{add}}
+\index{add@{add}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Timestamp ofx\-::\-Time\-::\-Utils\-::add (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount, }
+\item[{{\bf Date\-Time\-Field}}]{field}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a827ea2e2a78e2809a4b4266825125ea5}
+Add an arbitrary amount to the given Date\-Time\-Field of a Poco\-::\-Timestamp. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a528f095e1d5f6034ce4ef002d75319b3}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Days@{add\-Days}}
+\index{add\-Days@{add\-Days}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Days}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Local\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Days (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Local\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a528f095e1d5f6034ce4ef002d75319b3}
+Add days to a Poco\-::\-Local\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_ab58d2bde2402e0687028aa78100f2b25}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Days@{add\-Days}}
+\index{add\-Days@{add\-Days}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Days}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Days (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_ab58d2bde2402e0687028aa78100f2b25}
+Add days to a Poco\-::\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a156e3294d8ca20599da46fc725444994}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Days@{add\-Days}}
+\index{add\-Days@{add\-Days}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Days}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Timestamp ofx\-::\-Time\-::\-Utils\-::add\-Days (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a156e3294d8ca20599da46fc725444994}
+Add days to a Poco\-::\-Timestamp. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_ac3835661b0039cd3e7533b11a97d5a86}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Hours@{add\-Hours}}
+\index{add\-Hours@{add\-Hours}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Hours}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Local\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Hours (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Local\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_ac3835661b0039cd3e7533b11a97d5a86}
+Add hours to a Poco\-::\-Local\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a40643c203093f6ca4d8ef46a6fac5606}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Hours@{add\-Hours}}
+\index{add\-Hours@{add\-Hours}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Hours}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Hours (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a40643c203093f6ca4d8ef46a6fac5606}
+Add hours to a Poco\-::\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a8589788e12fc419a8c9a72a1b84c0c67}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Hours@{add\-Hours}}
+\index{add\-Hours@{add\-Hours}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Hours}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Timestamp ofx\-::\-Time\-::\-Utils\-::add\-Hours (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a8589788e12fc419a8c9a72a1b84c0c67}
+Add hours to a Poco\-::\-Timestamp. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a99e52f0d722ba14d6ebb5553cb2439b7}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Microseconds@{add\-Microseconds}}
+\index{add\-Microseconds@{add\-Microseconds}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Microseconds}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Local\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Microseconds (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Local\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a99e52f0d722ba14d6ebb5553cb2439b7}
+Add microseconds to a Poco\-::\-Local\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a61ea72a0a84a7c96587163b9e99d6907}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Microseconds@{add\-Microseconds}}
+\index{add\-Microseconds@{add\-Microseconds}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Microseconds}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Microseconds (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a61ea72a0a84a7c96587163b9e99d6907}
+Add microseconds to a Poco\-::\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a47a051310480cc97f0ce8f8f1f91905b}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Microseconds@{add\-Microseconds}}
+\index{add\-Microseconds@{add\-Microseconds}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Microseconds}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Timestamp ofx\-::\-Time\-::\-Utils\-::add\-Microseconds (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a47a051310480cc97f0ce8f8f1f91905b}
+Add microseconds to a Poco\-::\-Timestamp. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_ab04b1cb52c1ba6883be94aee0279670b}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Milliseconds@{add\-Milliseconds}}
+\index{add\-Milliseconds@{add\-Milliseconds}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Milliseconds}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Local\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Milliseconds (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Local\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_ab04b1cb52c1ba6883be94aee0279670b}
+Add milliseconds to a Poco\-::\-Local\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a8c12f8f2dd330272b545ff71be2bb59d}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Milliseconds@{add\-Milliseconds}}
+\index{add\-Milliseconds@{add\-Milliseconds}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Milliseconds}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Milliseconds (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a8c12f8f2dd330272b545ff71be2bb59d}
+Add milliseconds to a Poco\-::\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_aadbe39e1fccd2918dc0cd3e7c16c54bb}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Milliseconds@{add\-Milliseconds}}
+\index{add\-Milliseconds@{add\-Milliseconds}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Milliseconds}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Timestamp ofx\-::\-Time\-::\-Utils\-::add\-Milliseconds (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_aadbe39e1fccd2918dc0cd3e7c16c54bb}
+Add milliseconds to a Poco\-::\-Timestamp. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_ac5d0aae917881add18dc72c11f149819}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Minutes@{add\-Minutes}}
+\index{add\-Minutes@{add\-Minutes}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Minutes}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Local\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Minutes (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Local\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_ac5d0aae917881add18dc72c11f149819}
+Add minutes to a Poco\-::\-Local\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a43e5387cdfda3a2bd6c1b62253e8c377}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Minutes@{add\-Minutes}}
+\index{add\-Minutes@{add\-Minutes}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Minutes}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Minutes (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a43e5387cdfda3a2bd6c1b62253e8c377}
+Add minutes to a Poco\-::\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a0b8651b154d7c4d732b613483ce00c69}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Minutes@{add\-Minutes}}
+\index{add\-Minutes@{add\-Minutes}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Minutes}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Timestamp ofx\-::\-Time\-::\-Utils\-::add\-Minutes (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a0b8651b154d7c4d732b613483ce00c69}
+Add minutes to a Poco\-::\-Timestamp. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_ad092f0c788c0e2252579547707149f72}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Months@{add\-Months}}
+\index{add\-Months@{add\-Months}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Months}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Local\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Months (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Local\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_ad092f0c788c0e2252579547707149f72}
+Add days to a Poco\-::\-Local\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a770c756c1dc55365113452ea9c5774f9}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Months@{add\-Months}}
+\index{add\-Months@{add\-Months}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Months}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Months (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a770c756c1dc55365113452ea9c5774f9}
+Add days to a Poco\-::\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a97ac78b827ea795d0a812b04739defbb}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Months@{add\-Months}}
+\index{add\-Months@{add\-Months}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Months}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Timestamp ofx\-::\-Time\-::\-Utils\-::add\-Months (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a97ac78b827ea795d0a812b04739defbb}
+Add years to a Poco\-::\-Timestamp. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_ab4b4f749bc46f83a49775d800e3b259e}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Seconds@{add\-Seconds}}
+\index{add\-Seconds@{add\-Seconds}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Local\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Seconds (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Local\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_ab4b4f749bc46f83a49775d800e3b259e}
+Add microseconds to a Poco\-::\-Local\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a0c81c35f4d7e222608c532c8928e7ad1}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Seconds@{add\-Seconds}}
+\index{add\-Seconds@{add\-Seconds}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Seconds (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a0c81c35f4d7e222608c532c8928e7ad1}
+Add seconds to a Poco\-::\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a636103746891f05134bf42285f74f4dc}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Seconds@{add\-Seconds}}
+\index{add\-Seconds@{add\-Seconds}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Timestamp ofx\-::\-Time\-::\-Utils\-::add\-Seconds (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a636103746891f05134bf42285f74f4dc}
+Add seconds to a Poco\-::\-Timestamp. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a0ae2cc5bd1ea9d1ca19fbaa3b56fffa1}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Weeks@{add\-Weeks}}
+\index{add\-Weeks@{add\-Weeks}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Weeks}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Local\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Weeks (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Local\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a0ae2cc5bd1ea9d1ca19fbaa3b56fffa1}
+Add weeks to a Poco\-::\-Local\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a0084c244ea63702a498144686de5a477}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Weeks@{add\-Weeks}}
+\index{add\-Weeks@{add\-Weeks}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Weeks}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Weeks (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a0084c244ea63702a498144686de5a477}
+Add weeks to a Poco\-::\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a015f9341a146f6f26b5c6e861bf3ed24}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Weeks@{add\-Weeks}}
+\index{add\-Weeks@{add\-Weeks}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Weeks}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Timestamp ofx\-::\-Time\-::\-Utils\-::add\-Weeks (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a015f9341a146f6f26b5c6e861bf3ed24}
+Add weeks to a Poco\-::\-Timestamp. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a650e36e4834b7893e86af813b12aec79}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Years@{add\-Years}}
+\index{add\-Years@{add\-Years}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Years}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Local\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Years (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Local\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a650e36e4834b7893e86af813b12aec79}
+Add years to a Poco\-::\-Local\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_aa6bd242fcfbd53e80c2a2301b7a54e14}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Years@{add\-Years}}
+\index{add\-Years@{add\-Years}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Years}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Date\-Time ofx\-::\-Time\-::\-Utils\-::add\-Years (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Date\-Time \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_aa6bd242fcfbd53e80c2a2301b7a54e14}
+Add years to a Poco\-::\-Date\-Time. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_a43949aedd840364f84c779c52af85e1e}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!add\-Years@{add\-Years}}
+\index{add\-Years@{add\-Years}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{add\-Years}]{\setlength{\rightskip}{0pt plus 5cm}Poco\-::\-Timestamp ofx\-::\-Time\-::\-Utils\-::add\-Years (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{time, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a43949aedd840364f84c779c52af85e1e}
+Add years to a Poco\-::\-Timestamp. Amount values can be positive or negative. \hypertarget{classofx_1_1_time_1_1_utils_acd07a3c4b5eba6fedf1a2c744a66ac6a}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!get\-Instances@{get\-Instances}}
+\index{get\-Instances@{get\-Instances}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{get\-Instances}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ Poco\-::\-Timestamp $>$ ofx\-::\-Time\-::\-Utils\-::get\-Instances (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{start, }
+\item[{std\-::size\-\_\-t}]{num\-Instances, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount, }
+\item[{{\bf Date\-Time\-Field}}]{field}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_acd07a3c4b5eba6fedf1a2c744a66ac6a}
+Get a fixed number of instances beginning with the \char`\"{}start\char`\"{} time. Increments are defined by an amount and a Date\-Time\-Field. \hypertarget{classofx_1_1_time_1_1_utils_a7d48dcb41c6f936a7c8d2c45e23684b7}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!get\-Instances@{get\-Instances}}
+\index{get\-Instances@{get\-Instances}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{get\-Instances}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ Poco\-::\-Timestamp $>$ ofx\-::\-Time\-::\-Utils\-::get\-Instances (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{start, }
+\item[{const Poco\-::\-Timespan \&}]{timespan, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount, }
+\item[{{\bf Date\-Time\-Field}}]{field}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_a7d48dcb41c6f936a7c8d2c45e23684b7}
+Get all instances beginning with the \char`\"{}start\char`\"{} time that occur within the given Timespan. Increments are defined by an amount and a Date\-Time\-Field. \hypertarget{classofx_1_1_time_1_1_utils_ae91b9a0148df1a02b16be045c793b944}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!get\-Instances@{get\-Instances}}
+\index{get\-Instances@{get\-Instances}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{get\-Instances}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ Poco\-::\-Timestamp $>$ ofx\-::\-Time\-::\-Utils\-::get\-Instances (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{start, }
+\item[{const Poco\-::\-Timestamp \&}]{end, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount, }
+\item[{{\bf Date\-Time\-Field}}]{field}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_ae91b9a0148df1a02b16be045c793b944}
+Get all instances beginning with the \char`\"{}start\char`\"{} time that happen before the given \char`\"{}end\char`\"{} time. Increments are defined by an amount and a Date\-Time\-Field. \hypertarget{classofx_1_1_time_1_1_utils_aadd395d70f52dcfbd655baee45dc33ed}{\index{ofx\-::\-Time\-::\-Utils@{ofx\-::\-Time\-::\-Utils}!get\-Instances@{get\-Instances}}
+\index{get\-Instances@{get\-Instances}!ofx::Time::Utils@{ofx\-::\-Time\-::\-Utils}}
+\subsubsection[{get\-Instances}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ Poco\-::\-Timestamp $>$ ofx\-::\-Time\-::\-Utils\-::get\-Instances (
+\begin{DoxyParamCaption}
+\item[{const {\bf Range} \&}]{range, }
+\item[{Poco\-::\-Timestamp\-::\-Time\-Diff}]{amount, }
+\item[{{\bf Date\-Time\-Field}}]{field}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classofx_1_1_time_1_1_utils_aadd395d70f52dcfbd655baee45dc33ed}
+Get all instances beginning with the range's start time that happen before the range's \char`\"{}end\char`\"{} time. Increments are defined by an amount and a Date\-Time\-Field. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/bakercp/\-Programming/c-\/cpp/of-\/my/open\-Frameworks/addons/ofx\-Time/libs/ofx\-Time/include/ofx/\-Time/Utils.\-h\item 
+/\-Users/bakercp/\-Programming/c-\/cpp/of-\/my/open\-Frameworks/addons/ofx\-Time/libs/ofx\-Time/src/Utils.\-cpp\end{DoxyCompactItemize}

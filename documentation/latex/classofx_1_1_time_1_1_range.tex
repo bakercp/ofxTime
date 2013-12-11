@@ -1,0 +1,112 @@
+\hypertarget{classofx_1_1_time_1_1_range}{\section{ofx\-:\-:Time\-:\-:Range Class Reference}
+\label{classofx_1_1_time_1_1_range}\index{ofx\-::\-Time\-::\-Range@{ofx\-::\-Time\-::\-Range}}
+}
+
+
+{\ttfamily \#include $<$Range.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classofx_1_1_time_1_1_range_a9e663229b827ec8ad57c8df563cdd8d4}{Range} ()
+\item 
+\hyperlink{classofx_1_1_time_1_1_range_a567148ab9e653f6f44d9c54c15a990e4}{Range} (const Poco\-::\-Timestamp \&minimum, const Poco\-::\-Timestamp \&maximum)
+\item 
+\hypertarget{classofx_1_1_time_1_1_range_a700489127e65341dba5a5be370869093}{\hyperlink{classofx_1_1_time_1_1_range_a700489127e65341dba5a5be370869093}{Range} (const Poco\-::\-Timestamp \&center, const Poco\-::\-Timespan \&timespan)}\label{classofx_1_1_time_1_1_range_a700489127e65341dba5a5be370869093}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classofx_1_1_time_1_1_range}{Range} represents a timespan defined by two timestamps. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_range_a98398649e52a13a515b3c5cb13074c06}{virtual \hyperlink{classofx_1_1_time_1_1_range_a98398649e52a13a515b3c5cb13074c06}{$\sim$\-Range} ()}\label{classofx_1_1_time_1_1_range_a98398649e52a13a515b3c5cb13074c06}
+
+\begin{DoxyCompactList}\small\item\em Destroys the \hyperlink{classofx_1_1_time_1_1_range}{Range}. \end{DoxyCompactList}\item 
+void \hyperlink{classofx_1_1_time_1_1_range_ade613f6f9bf9db11ec5d7319cdffbffe}{set} (const Poco\-::\-Timestamp \&minimum, const Poco\-::\-Timestamp \&maximum)
+\item 
+void \hyperlink{classofx_1_1_time_1_1_range_a1c3e59b3f97002b969e4e703c1c2247b}{set\-From\-Center} (const Poco\-::\-Timestamp \&center, const Poco\-::\-Timespan \&timespan)
+\item 
+\hypertarget{classofx_1_1_time_1_1_range_ad8d3b7bd18cdce6b227f98191fca53f0}{Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_range_ad8d3b7bd18cdce6b227f98191fca53f0}{get\-Minimum} () const }\label{classofx_1_1_time_1_1_range_ad8d3b7bd18cdce6b227f98191fca53f0}
+
+\begin{DoxyCompactList}\small\item\em Returns the range minimum. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_range_a3cb61178b147cff3287d59e6b65134ba}{Poco\-::\-Timestamp \hyperlink{classofx_1_1_time_1_1_range_a3cb61178b147cff3287d59e6b65134ba}{get\-Maximum} () const }\label{classofx_1_1_time_1_1_range_a3cb61178b147cff3287d59e6b65134ba}
+
+\begin{DoxyCompactList}\small\item\em Returns the range maximum. \end{DoxyCompactList}\item 
+\hypertarget{classofx_1_1_time_1_1_range_a1a64e2ff88fb9dabf23e4d7cf29d5273}{Poco\-::\-Timestamp {\bfseries lerp} (float amount, bool clamp=true) const }\label{classofx_1_1_time_1_1_range_a1a64e2ff88fb9dabf23e4d7cf29d5273}
+
+\item 
+\hypertarget{classofx_1_1_time_1_1_range_a167a600fa229c0b33e85a44b0cc6c4eb}{float {\bfseries map} (const Poco\-::\-Timestamp \&time, bool clamp=true) const }\label{classofx_1_1_time_1_1_range_a167a600fa229c0b33e85a44b0cc6c4eb}
+
+\item 
+\hypertarget{classofx_1_1_time_1_1_range_a7f86328226a89c4f8de7876b5993390a}{float {\bfseries normalize} (const Poco\-::\-Timestamp \&time) const }\label{classofx_1_1_time_1_1_range_a7f86328226a89c4f8de7876b5993390a}
+
+\item 
+\hypertarget{classofx_1_1_time_1_1_range_a4bcf46a4d880ec811592cd2ab63a1740}{Poco\-::\-Timespan {\bfseries get\-Timespan} () const }\label{classofx_1_1_time_1_1_range_a4bcf46a4d880ec811592cd2ab63a1740}
+
+\item 
+\hypertarget{classofx_1_1_time_1_1_range_a5e01715f942744988458fde71ea40491}{bool {\bfseries contains} (const Poco\-::\-Timestamp \&timestamp) const }\label{classofx_1_1_time_1_1_range_a5e01715f942744988458fde71ea40491}
+
+\item 
+\hypertarget{classofx_1_1_time_1_1_range_a1820ddf102473668482ea9a1c03ad214}{bool {\bfseries contains} (const \hyperlink{classofx_1_1_time_1_1_range}{Range} \&range) const }\label{classofx_1_1_time_1_1_range_a1820ddf102473668482ea9a1c03ad214}
+
+\item 
+\hypertarget{classofx_1_1_time_1_1_range_ae6b022bd53084f1bc343cc7631a69184}{bool {\bfseries intersects} (const \hyperlink{classofx_1_1_time_1_1_range}{Range} \&range) const }\label{classofx_1_1_time_1_1_range_ae6b022bd53084f1bc343cc7631a69184}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classofx_1_1_time_1_1_range_a0a01fafc7530b9cfd073ea165b88c250}{static bool {\bfseries intersects} (const \hyperlink{classofx_1_1_time_1_1_range}{Range} \&range0, const \hyperlink{classofx_1_1_time_1_1_range}{Range} \&range1)}\label{classofx_1_1_time_1_1_range_a0a01fafc7530b9cfd073ea165b88c250}
+
+\item 
+\hypertarget{classofx_1_1_time_1_1_range_a0d94bc7cfbac0378368062f9128ba49a}{static Poco\-::\-Timestamp {\bfseries lerp} (const \hyperlink{classofx_1_1_time_1_1_range}{Range} \&range, float amount, bool clamp=true)}\label{classofx_1_1_time_1_1_range_a0d94bc7cfbac0378368062f9128ba49a}
+
+\item 
+\hypertarget{classofx_1_1_time_1_1_range_a89245a53463f024a9a676a23876cbb8c}{static float {\bfseries map} (const \hyperlink{classofx_1_1_time_1_1_range}{Range} \&range, const Poco\-::\-Timestamp \&time, bool clamp=true)}\label{classofx_1_1_time_1_1_range_a89245a53463f024a9a676a23876cbb8c}
+
+\item 
+\hypertarget{classofx_1_1_time_1_1_range_a3ed9bb58fe4fd4f32516f4402aedd476}{static float {\bfseries normalize} (const \hyperlink{classofx_1_1_time_1_1_range}{Range} \&range, const Poco\-::\-Timestamp \&time)}\label{classofx_1_1_time_1_1_range_a3ed9bb58fe4fd4f32516f4402aedd476}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classofx_1_1_time_1_1_range}{Range} represents a timespan defined bounded by timestamps. The minimum Poco\-::\-Timestamp is guaranteed $<$= maximum Poco\-::\-Timestamp. Poco does not offer full support for Poco\-::\-Timestamp $<$ 0. The behavior of range for values $<$ 0 is undefined. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classofx_1_1_time_1_1_range_a9e663229b827ec8ad57c8df563cdd8d4}{\index{ofx\-::\-Time\-::\-Range@{ofx\-::\-Time\-::\-Range}!Range@{Range}}
+\index{Range@{Range}!ofx::Time::Range@{ofx\-::\-Time\-::\-Range}}
+\subsubsection[{Range}]{\setlength{\rightskip}{0pt plus 5cm}ofx\-::\-Time\-::\-Range\-::\-Range (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classofx_1_1_time_1_1_range_a9e663229b827ec8ad57c8df563cdd8d4}
+Creates an empty range. Both minimum and maximum are set to with Poco\-::\-Timestamp(0). \hypertarget{classofx_1_1_time_1_1_range_a567148ab9e653f6f44d9c54c15a990e4}{\index{ofx\-::\-Time\-::\-Range@{ofx\-::\-Time\-::\-Range}!Range@{Range}}
+\index{Range@{Range}!ofx::Time::Range@{ofx\-::\-Time\-::\-Range}}
+\subsubsection[{Range}]{\setlength{\rightskip}{0pt plus 5cm}ofx\-::\-Time\-::\-Range\-::\-Range (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{minimum, }
+\item[{const Poco\-::\-Timestamp \&}]{maximum}
+\end{DoxyParamCaption}
+)}}\label{classofx_1_1_time_1_1_range_a567148ab9e653f6f44d9c54c15a990e4}
+Creates an \hyperlink{classofx_1_1_time_1_1_range}{Range} with a minimum and a maximum Poco\-::\-Timestamp. If minimum is not $<$= maximum, the two values are swapped to guarantee that minimum $<$= maximum. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classofx_1_1_time_1_1_range_ade613f6f9bf9db11ec5d7319cdffbffe}{\index{ofx\-::\-Time\-::\-Range@{ofx\-::\-Time\-::\-Range}!set@{set}}
+\index{set@{set}!ofx::Time::Range@{ofx\-::\-Time\-::\-Range}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void ofx\-::\-Time\-::\-Range\-::set (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{minimum, }
+\item[{const Poco\-::\-Timestamp \&}]{maximum}
+\end{DoxyParamCaption}
+)}}\label{classofx_1_1_time_1_1_range_ade613f6f9bf9db11ec5d7319cdffbffe}
+Sets the \hyperlink{classofx_1_1_time_1_1_range}{Range} bounds. If minimum is not $<$= maximum, the two values are swapped to guarantee that minimum $<$= maximum. \hypertarget{classofx_1_1_time_1_1_range_a1c3e59b3f97002b969e4e703c1c2247b}{\index{ofx\-::\-Time\-::\-Range@{ofx\-::\-Time\-::\-Range}!set\-From\-Center@{set\-From\-Center}}
+\index{set\-From\-Center@{set\-From\-Center}!ofx::Time::Range@{ofx\-::\-Time\-::\-Range}}
+\subsubsection[{set\-From\-Center}]{\setlength{\rightskip}{0pt plus 5cm}void ofx\-::\-Time\-::\-Range\-::set\-From\-Center (
+\begin{DoxyParamCaption}
+\item[{const Poco\-::\-Timestamp \&}]{center, }
+\item[{const Poco\-::\-Timespan \&}]{timespan}
+\end{DoxyParamCaption}
+)}}\label{classofx_1_1_time_1_1_range_a1c3e59b3f97002b969e4e703c1c2247b}
+Sets the range from the center. The minimum value becomes center -\/ timespan / 2. The maximum value becomes center + timespan / 2. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/bakercp/\-Programming/c-\/cpp/of-\/my/open\-Frameworks/addons/ofx\-Time/libs/ofx\-Time/include/ofx/\-Time/Range.\-h\item 
+/\-Users/bakercp/\-Programming/c-\/cpp/of-\/my/open\-Frameworks/addons/ofx\-Time/libs/ofx\-Time/src/Range.\-cpp\end{DoxyCompactItemize}
