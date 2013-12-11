@@ -30,7 +30,7 @@
 #include "ofxTime.h"
 
 
-using namespace ofx;
+using namespace ofx::Time;
 
 
 class ofApp: public ofBaseApp
@@ -39,7 +39,7 @@ public:
     void setup();
     void draw();
 
-    Time::Range range0;
-    Time::Range range1;
+    Interval interval0;
+    Interval interval1;
 
 };

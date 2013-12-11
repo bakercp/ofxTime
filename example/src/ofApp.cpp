@@ -26,10 +26,10 @@
 #include "ofApp.h"
 
 
-//------------------------------------------------------------------------------
 void ofApp::setup()
 {
     ofSetFrameRate(30);
+    ofEnableAlphaBlending();
 
     const std::string TWITTER_DATE_FORMAT = "%w %b %f %H:%M:%S %Z %Y";
 
@@ -79,43 +79,43 @@ void ofApp::setup()
 
     // set up our ranges.  the Time::Range::set() function will order the
     // Poco::Timestamps appropriately.
-    range0.set(min0.timestamp(), max0.timestamp());
-    range1.set(min1.timestamp(), max1.timestamp());
+    interval0.set(min0.timestamp(), max0.timestamp());
+    interval1.set(min1.timestamp(), max1.timestamp());
 
-    std::string range0Min = Poco::DateTimeFormatter::format(range0.getMinimum(), Poco::DateTimeFormat::RFC1036_FORMAT);
-    std::string range0Max = Poco::DateTimeFormatter::format(range0.getMaximum(), Poco::DateTimeFormat::RFC1036_FORMAT);
-    std::string range1Min = Poco::DateTimeFormatter::format(range1.getMinimum(), Poco::DateTimeFormat::RFC1036_FORMAT);
-    std::string range1Max = Poco::DateTimeFormatter::format(range1.getMaximum(), Poco::DateTimeFormat::RFC1036_FORMAT);
+    std::string range0Min = Utils::format(interval0.getStart());
+    std::string range0Max = Utils::format(interval0.getEnd());
+    std::string range1Min = Utils::format(interval1.getStart());
+    std::string range1Max = Utils::format(interval1.getEnd());
 
     ofLogNotice("ofApp::setup()") << "range0: " << range0Min << " - " << range0Max;
     ofLogNotice("ofApp::setup()") << "range1: " << range1Min << " - " << range1Max;
 
 }
 
-//------------------------------------------------------------------------------
+
 void ofApp::draw()
 {
-    ofBackground(0);
+    ofBackgroundGradient(ofColor::white, ofColor::black);
 
     // get the screen Y values of range1
-    float y0 = ofMap(range1.getMinimum().utcTime(), range0.getMinimum().utcTime(), range0.getMaximum().utcTime(), 0, ofGetHeight());
-    float y1 = ofMap(range1.getMaximum().utcTime(), range0.getMinimum().utcTime(), range0.getMaximum().utcTime(), 0, ofGetHeight());
+    float y0 = ofMap(interval1.getStart().utcTime(), interval0.getStart().utcTime(), interval0.getEnd().utcTime(), 0, ofGetHeight());
+    float y1 = ofMap(interval1.getEnd().utcTime(), interval0.getStart().utcTime(), interval0.getEnd().utcTime(), 0, ofGetHeight());
 
     // draw range0
     ofFill();
-    ofSetColor(ofColor::yellow);
-    ofRect(0, 0, ofGetWidth() / 4, ofGetHeight());
+    ofSetColor(ofColor::yellow, 80);
+    ofRectRounded(0, 0, ofGetWidth() / 4, ofGetHeight(), 5);
 
     // draw range1
     ofFill();
-    ofSetColor(ofColor::red);
-    ofRect(0, y0, ofGetWidth() / 4, y1 - y0);
+    ofSetColor(ofColor::red, 80);
+    ofRectRounded(0, y0, ofGetWidth() / 4, y1 - y0, 5);
 
     // get the range boundaries as formatted strings
-    std::string range0Min = Poco::DateTimeFormatter::format(range0.getMinimum(), Poco::DateTimeFormat::RFC1036_FORMAT);
-    std::string range0Max = Poco::DateTimeFormatter::format(range0.getMaximum(), Poco::DateTimeFormat::RFC1036_FORMAT);
-    std::string range1Min = Poco::DateTimeFormatter::format(range1.getMinimum(), Poco::DateTimeFormat::RFC1036_FORMAT);
-    std::string range1Max = Poco::DateTimeFormatter::format(range1.getMaximum(), Poco::DateTimeFormat::RFC1036_FORMAT);
+    std::string range0Min = Utils::format(interval0.getStart());
+    std::string range0Max = Utils::format(interval0.getEnd());
+    std::string range1Min = Utils::format(interval1.getStart());
+    std::string range1Max = Utils::format(interval1.getEnd());
 
     // draw the range boundaries
     ofDrawBitmapStringHighlight(range0Min, ofVec2f(ofGetWidth() / 4, + 14));
@@ -124,17 +124,17 @@ void ofApp::draw()
     ofDrawBitmapStringHighlight(range1Max, ofVec2f(ofGetWidth() / 4, y1));
 
     // draw a line based on the cursor position
-    ofSetColor(0,255,0);
+    ofSetColor(255);
     ofLine(0, ofGetMouseY(), ofGetWidth(), ofGetMouseY());
 
     // calculate the noramlized cursor position
     float normalizedMousePosition = ofGetMouseY() / (float)ofGetHeight();
 
     // use the range0's lerp function to interpolate the date under the mouse
-    Poco::Timestamp ts = range0.lerp(normalizedMousePosition);
+    Poco::Timestamp ts = interval0.lerp(normalizedMousePosition);
 
     // formate the interpolated date to a string
-    std::string ts0 = Poco::DateTimeFormatter::format(ts, Poco::DateTimeFormat::RFC1036_FORMAT);
+    std::string ts0 = Utils::format(ts);
 
     // draw the interpolated date
     ofDrawBitmapStringHighlight(ts0, ofVec2f(ofGetWidth() / 4, ofGetMouseY()));
