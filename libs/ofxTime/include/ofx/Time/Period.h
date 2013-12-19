@@ -62,66 +62,66 @@ public:
     };
 
     Period();
-        ///> Create a 0 period.
+        ///< Create a 0 period.
 
     Period(Field field, int64_t amount);
-        ///> Create a period with a given amount in a given field.
-        ///> The amount can be negative.
+        ///< Create a period with a given amount in a given field.
+        ///< The amount can be negative.
 
     virtual ~Period();
-        ///> Destroy the Period.
+        ///< Destroy the Period.
 
     void set(Field field, int64_t amount);
-        ///> Set the value of a specific field.
+        ///< Set the value of a specific field.
 
     Poco::Timestamp::TimeVal get(Field field) const;
-        ///> Get the given field's amount.
+        ///< Get the given field's amount.
 
     void add(Field field, int64_t amount);
-        ///> Add the given amount to the given Field.
-        ///> The amount can be negative.
+        ///< Add the given amount to the given Field.
+        ///< The amount can be negative.
 
     void addMicroseconds(int64_t amount);
         ///< Add microseconds.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     void addMilliseconds(int64_t amount);
         ///< Add milliseconds.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     void addSeconds(int64_t amount);
         ///< Add seconds.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     void addMinutes(int64_t amount);
         ///< Add minutes.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     void addHours(int64_t amount);
         ///< Add hours.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     void addDays(int64_t amount);
         ///< Add days.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     void addWeeks(int64_t amount);
         ///< Add weeks.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     void addMonths(int64_t amount);
         ///< Add months.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     void addYears(int64_t amount);
         ///< Add years.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     void clear(Field field);
-        ///> Clear a given Field's value.
+        ///< Clear a given Field's value.
 
     bool empty() const;
-        ///> Returns true iff all possible fields are set to 0.
+        ///< Returns true iff all possible fields are set to 0.
 
     Period  operator +  (const Period& period) const;
 	Period  operator -  (const Period& period) const;
@@ -133,63 +133,63 @@ public:
 
     static Period Microseconds(int64_t amount);
         ///< Returns a period of microseconds.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     static Period Millisecond();
         ///< Returns a period of one millisecond.
 
     static Period Milliseconds(int64_t amount);
         ///< Returns a period of milliseconds.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     static Period Second();
         ///< Returns a period of one second.
 
     static Period Seconds(int64_t amount);
         ///< Returns a period of seconds.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     static Period Minute();
         ///< Returns a period of one minute.
 
     static Period Minutes(int64_t amount);
         ///< Returns a period of minutes.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     static Period Hour();
         ///< Returns a period of one hour.
 
     static Period Hours(int64_t amount);
         ///< Returns a period of hours.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     static Period Day();
         ///< Returns a period of one day.
 
     static Period Days(int64_t amount);
         ///< Returns a period of days.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     static Period Week();
         ///< Returns a period of one week.
 
     static Period Weeks(int64_t amount);
         ///< Returns a period of days.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     static Period Month();
         ///< Returns a period of one month.
 
     static Period Month(int64_t amount);
         ///< Returns a period of months.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
     static Period Year();
         ///< Returns a period of one year.
 
     static Period Years(int64_t amount);
         ///< Returns a period of years.
-        ///> The amount can be negative.
+        ///< The amount can be negative.
 
 private:
     typedef std::vector<int64_t> FieldMap;
