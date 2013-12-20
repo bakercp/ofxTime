@@ -46,22 +46,22 @@ namespace Time {
 
 // TODO: round to period fields
 class Utils
-    /// This class contains a collection of utilities for manipulating
-    /// Poco::DateTime, Poco::LocalDateTime and Poco::Timestamp.
-    ///
-    /// Rounding dates and times is timezone dependent.  When dates and times
-    /// must be rounded with respect to a specific timezone, the Poco::Timestamp
-    /// or Poco::DateTime should be converted to a Poco::LocalDateTime before
-    /// rounding.  The UTC equivalent of a Poco::LocalDateTime can then be
-    /// extracted using the toUtcTimestamp() or toUtcDateTime() functions.
-    ///
-    /// Notes:
-    ///   * Negative years (years preceding 1 BC) are not supported, thus "truncation" (floor toward zero) is not supported.
-    ///
-	/// For more information, please see:
-	///   * http://pocoproject.org/docs/Poco.Timestamp.html
-	///   * http://pocoproject.org/docs/Poco.DateTime.html
-    ///   * http://pocoproject.org/docs/Poco.LocalDateTime.html
+    // This class contains a collection of utilities for manipulating
+    // Poco::DateTime, Poco::LocalDateTime and Poco::Timestamp.
+    //
+    // Rounding dates and times is timezone dependent.  When dates and times
+    // must be rounded with respect to a specific timezone, the Poco::Timestamp
+    // or Poco::DateTime should be converted to a Poco::LocalDateTime before
+    // rounding.  The UTC equivalent of a Poco::LocalDateTime can then be
+    // extracted using the toUtcTimestamp() or toUtcDateTime() functions.
+    //
+    // Notes:
+    //   * Negative years (years preceding 1 BC) are not supported, thus "truncation" (floor toward zero) is not supported.
+    //
+    // For more information, please see:
+    //   * http://pocoproject.org/docs/Poco.Timestamp.html
+    //   * http://pocoproject.org/docs/Poco.DateTime.html
+    //   * http://pocoproject.org/docs/Poco.LocalDateTime.html
 {
 public:
     static std::vector<Poco::Timestamp> getInstances(const Poco::Timestamp& start,
