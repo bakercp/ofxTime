@@ -117,11 +117,11 @@ public:
         ///< Returns true iff the endpoints of the given Interval
         ///< are not exactly equal to the endpoints of this Interval.
 
-	bool operator >  (const Interval& other) const;
+    bool operator >  (const Interval& other) const;
         ///< Returns true iff the minimum is greater
         ///< than the given Interval's minimum.
 
-	bool operator >= (const Interval& other) const;
+    bool operator >= (const Interval& other) const;
         ///< Returns true iff the minimum is greater than
         ///< or equal to the given Interval's minimum.
 
