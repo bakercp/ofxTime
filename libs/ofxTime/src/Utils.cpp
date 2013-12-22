@@ -102,36 +102,45 @@ Poco::LocalDateTime Utils::add(const Poco::LocalDateTime& time,
 }
 
 
-Poco::DateTime Utils::add(const Poco::DateTime& time, const Period& period)
+Poco::DateTime Utils::add(const Poco::DateTime& timez, const Period& period)
 {
-    for (Period::Field field = Period::YEAR; field >= Period::MICROSECOND; --field)
+    Poco::DateTime dateTime = timez;
+
+    for (int i = (int)(Period::NUM_FIELDS - 1); i > -1; --i)
     {
+        Period::Field field = (Period::Field)i;
+
         int64_t amount = period.get(field);
 
-        if (amount == 0) continue;
+        if (0 == amount) continue;
 
         switch (field)
         {
             case Period::MICROSECOND:
-                return time + Poco::Timespan(amount);
+                dateTime += Poco::Timespan(amount);
+                break;
             case Period::MILLISECOND:
-                return time + Poco::Timespan(amount * Poco::Timespan::MILLISECONDS);
+                dateTime += Poco::Timespan(amount * Poco::Timespan::MILLISECONDS);
+                break;
             case Period::SECOND:
-                return time + Poco::Timespan(amount * Poco::Timespan::SECONDS);
+                dateTime += Poco::Timespan(amount * Poco::Timespan::SECONDS);
+                break;
             case Period::MINUTE:
-                return time + Poco::Timespan(amount * Poco::Timespan::MINUTES);
+                dateTime += Poco::Timespan(amount * Poco::Timespan::MINUTES);
+                break;
             case Period::HOUR:
-                return time + Poco::Timespan(amount * Poco::Timespan::HOURS);
+                dateTime += Poco::Timespan(amount * Poco::Timespan::HOURS);
+                break;
             case Period::DAY:
-                return time + Poco::Timespan(amount * Poco::Timespan::DAYS);
+                dateTime += Poco::Timespan(amount * Poco::Timespan::DAYS);
+                break;
             case Period::WEEK:
-                return time + Poco::Timespan(amount * 7 * Poco::Timespan::DAYS);
+                dateTime += Poco::Timespan(amount * 7 * Poco::Timespan::DAYS);
+                break;
             case Period::MONTH:
             {
-                Poco::DateTime result(time);
-
-                int yearsToAdd  = (time.month() + amount) / 12;
-                int newMonth = (time.month() + amount) % 12;
+                int yearsToAdd  = (dateTime.month() + amount) / 12;
+                int newMonth = (dateTime.month() + amount) % 12;
 
                 // deal with negative months
                 if (newMonth < 1)
@@ -140,52 +149,52 @@ Poco::DateTime Utils::add(const Poco::DateTime& time, const Period& period)
                     yearsToAdd--;
                 }
 
-                result = addYears(result, yearsToAdd);
+                dateTime = addYears(dateTime, yearsToAdd);
 
                 try
                 {
-                    result = Poco::DateTime(result.year(),
-                                            newMonth,
-                                            1, // remove days, add back later
-                                            result.minute(),
-                                            result.second(),
-                                            result.millisecond(),
-                                            result.microsecond());
+                    dateTime = Poco::DateTime(dateTime.year(),
+                                              newMonth,
+                                              1, // remove days, add back later
+                                              dateTime.minute(),
+                                              dateTime.second(),
+                                              dateTime.millisecond(),
+                                              dateTime.microsecond());
                 }
                 catch (Poco::Exception& exception)
                 {
-                    ofLogError("Math::add()") << exception.displayText();
+                    ofLogError("Utils::add()") << exception.displayText();
                 }
 
-                int numDaysInThisMonth = Poco::DateTime::daysOfMonth(result.year(),
-                                                                     result.month());
+                int numDaysInThisMonth = Poco::DateTime::daysOfMonth(dateTime.year(),
+                                                                     dateTime.month());
 
-                int daysToAdd = std::min(time.day(), numDaysInThisMonth) - 1; // keep it in Interval
+                int daysToAdd = std::min(dateTime.day(), numDaysInThisMonth) - 1; // keep it in Interval
 
                 // add days back
-                result = addDays(result, daysToAdd);
-
-                return result;
-
+                dateTime = addDays(dateTime, daysToAdd);
+                break;
             }
             case Period::YEAR:
             {
-                // TODO:: Condense functions
-                Poco::DateTime result(time);
-
                 if (amount > 0)
                 {
-                    int leapDays = countLeapDaysBetweenYears(time.year(), time.year() + amount + 1);
-                    return time + Poco::Timespan((Poco::Timestamp::TimeDiff)(365 * amount + leapDays) * Poco::Timespan::DAYS);
+                    int leapDays = countLeapDaysBetweenYears(dateTime.year(), dateTime.year() + amount + 1);
+                    dateTime += Poco::Timespan((Poco::Timestamp::TimeDiff)(365 * amount + leapDays) * Poco::Timespan::DAYS);
                 }
                 else
                 {
-                    int leapDays = countLeapDaysBetweenYears(time.year() + amount, time.year() + 1);
-                    return time - Poco::Timespan((Poco::Timestamp::TimeDiff)(365 * -amount + leapDays) * Poco::Timespan::DAYS);
+                    int leapDays = countLeapDaysBetweenYears(dateTime.year() + amount, dateTime.year() + 1);
+                    dateTime -= Poco::Timespan((Poco::Timestamp::TimeDiff)(365 * -amount + leapDays) * Poco::Timespan::DAYS);
                 }
+                break;
             }
+            default:
+                ofLogWarning("Utils::add()") << "Unknown field: " << field;
         }
     }
+
+    return dateTime;
 }
 
 
@@ -491,7 +500,7 @@ Poco::LocalDateTime Utils::floor(const Poco::LocalDateTime& localDateTime,
 
 
 Poco::DateTime Utils::round(const Poco::DateTime& dateTime,
-                             Period::Field field)
+                            Period::Field field)
 {
     switch(field)
     {
@@ -513,6 +522,9 @@ Poco::DateTime Utils::round(const Poco::DateTime& dateTime,
             return round(dateTime, Poco::Timespan::DAYS * 365.25 / 12);
         case Period::YEAR:
             return round(dateTime, Poco::Timespan::DAYS * 365.25);
+        default:
+            ofLogWarning("Utils::round()") << "Unknown field: " << field;
+            return dateTime;
     }
 }
 
@@ -539,6 +551,9 @@ Poco::DateTime Utils::ceiling(const Poco::DateTime& dateTime,
             return ceiling(dateTime, Poco::Timespan::DAYS * 365.25 / 12);
         case Period::YEAR:
             return ceiling(dateTime, Poco::Timespan::DAYS * 365.25);
+        default:
+            ofLogWarning("Utils::round()") << "Unknown field: " << field;
+            return dateTime;
     }
 }
 
@@ -565,6 +580,9 @@ Poco::DateTime Utils::floor(const Poco::DateTime& dateTime,
             return floor(dateTime, Poco::Timespan::DAYS * 365.25 / 12);
         case Period::YEAR:
             return floor(dateTime, Poco::Timespan::DAYS * 365.25);
+        default:
+            ofLogWarning("Utils::round()") << "Unknown field: " << field;
+            return dateTime;
     }
 }
 

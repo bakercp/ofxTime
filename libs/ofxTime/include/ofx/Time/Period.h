@@ -27,6 +27,7 @@
 
 
 #include <vector>
+#include <cstdlib>
 #include "Poco/Timestamp.h"
 #include "Poco/Timespan.h"
 
@@ -58,7 +59,12 @@ public:
         DAY,            ///< The day field.
         WEEK,           ///< The week increment field.
         MONTH,          ///< The month field
-        YEAR,           ///< The year field.
+        YEAR            ///< The year field.
+    };
+
+    enum 
+    {
+        NUM_FIELDS = YEAR + 1
     };
 
     Period();

@@ -78,7 +78,7 @@ bool Period::empty() const
 
     while (iter != _fields.end())
     {
-        if (*iter != 0)
+        if (0 != *iter)
         {
             return false;
         }
@@ -92,9 +92,9 @@ Period  Period::operator +  (const Period& period) const
 {
     Period _period;
 
-    for (Period::Field field = MICROSECOND; field <= YEAR; ++field)
+    for (int field = 0; field < (int)NUM_FIELDS; ++field)
     {
-        _period.set(field, _fields[field] + period._fields[field]);
+        _period.set((Field)field, _fields[field] + period._fields[field]);
     }
 
     return _period;
@@ -104,9 +104,9 @@ Period  Period::operator -  (const Period& period) const
 {
     Period _period;
 
-    for (Period::Field field = MICROSECOND; field <= YEAR; ++field)
+    for (int field = 0; field < (int)NUM_FIELDS; ++field)
     {
-        _period.set(field, _fields[field] - period._fields[field]);
+        _period.set((Field)field, _fields[field] - period._fields[field]);
     }
 
     return _period;
@@ -114,7 +114,7 @@ Period  Period::operator -  (const Period& period) const
 
 Period& Period::operator += (const Period& period)
 {
-    for (Period::Field field = MICROSECOND; field <= YEAR; ++field)
+    for (int field = 0; field < (int)NUM_FIELDS; ++field)
     {
         _fields[field] += period._fields[field];
     }
@@ -125,7 +125,7 @@ Period& Period::operator += (const Period& period)
 
 Period& Period::operator -= (const Period& period)
 {
-    for (Period::Field field = MICROSECOND; field <= YEAR; ++field)
+    for (int field = 0; field < (int)NUM_FIELDS; ++field)
     {
         _fields[field] -= period._fields[field];
     }
