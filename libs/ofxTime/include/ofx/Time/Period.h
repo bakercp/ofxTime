@@ -28,6 +28,7 @@
 
 #include <vector>
 #include <cstdlib>
+#include <stdint.h>
 #include "Poco/Timestamp.h"
 #include "Poco/Timespan.h"
 
