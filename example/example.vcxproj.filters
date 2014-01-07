@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxTime\libs\ofxTime\src\Interval.cpp">
+      <Filter>addons\ofxTime\libs\ofxTime\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxTime\libs\ofxTime\src\Period.cpp">
+      <Filter>addons\ofxTime\libs\ofxTime\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxTime\libs\ofxTime\src\Utils.cpp">
+      <Filter>addons\ofxTime\libs\ofxTime\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTime">
+      <UniqueIdentifier>{31E7FACF-40B0-BD24-3D39-6EF8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTime\src">
+      <UniqueIdentifier>{28C259A9-05DB-E7B3-D711-53E2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTime\libs">
+      <UniqueIdentifier>{825FDB0A-327F-4173-EBA9-C8A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTime\libs\ofxTime">
+      <UniqueIdentifier>{432712DC-41E9-A512-3FA6-042C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTime\libs\ofxTime\include">
+      <UniqueIdentifier>{B9C07360-A26F-DB5D-2C8F-F5ED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTime\libs\ofxTime\include\ofx">
+      <UniqueIdentifier>{E50A060A-526F-AD2F-509A-D595}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTime\libs\ofxTime\include\ofx\Time">
+      <UniqueIdentifier>{D8F2DEA9-BB29-7A50-E41E-71EB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxTime\libs\ofxTime\src">
+      <UniqueIdentifier>{F3825082-3BEB-C871-5148-0B66}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTime\src\ofxTime.h">
+      <Filter>addons\ofxTime\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTime\libs\ofxTime\include\ofx\Time\Interval.h">
+      <Filter>addons\ofxTime\libs\ofxTime\include\ofx\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTime\libs\ofxTime\include\ofx\Time\Period.h">
+      <Filter>addons\ofxTime\libs\ofxTime\include\ofx\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxTime\libs\ofxTime\include\ofx\Time\Utils.h">
+      <Filter>addons\ofxTime\libs\ofxTime\include\ofx\Time</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+</Project>
