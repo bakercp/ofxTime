@@ -36,66 +36,78 @@ namespace Time {
 
 
 class Interval
-    /// Interval represents a timespan defined bounded by timestamps.
-    /// The minimum Poco::Timestamp is guaranteed <= maximum Poco::Timestamp.
+    /// \brief Interval represents a timespan defined bounded by timestamps.
+    /// \details The start Poco::Timestamp is guaranteed <= end Poco::Timestamp.
     /// Poco does not offer full support for Poco::Timestamp < 0.
     /// The behavior of Interval for values < 0 is undefined.
     ///
     /// Comparison operators operate on one or both end points.  Equality
     /// operators compare both end points.  Comparison operators >, <, >=, <=
-    /// compare only the minimum end point and are primarily useful for sorting.
+    /// compare only the start end point and are primarily useful for sorting.
+    ///
+    /// \note The relationship `start <= end` is enforced by this class.
 {
 public:
     Interval();
-        ///< Creates an empty Interval.
-        ///< Both minimum and maximum are set to with Poco::Timestamp(0).
+        ///< \brief Creates an empty Interval.
+        ///< \details Both start and end are set to with Poco::Timestamp(0).
 
-    Interval(const Poco::Timestamp& minimum, const Poco::Timestamp& maximum);
-        ///< Creates an Interval with a minimum and a maximum Poco::Timestamp.
-        ///< If minimum is not <= maximum, the two values are swapped to
-        ///< guarantee that minimum <= maximum.
+    Interval(const Poco::Timestamp& start, const Poco::Timestamp& end);
+        ///< \brief Creates an Interval with a start and a end Poco::Timestamp.
+        ///< \param start is starting timestamp.
+        ///< \param end is the ending timestamp.
+        ///< \note If `start > end`, the `start` and `end` are
+        ///< swapped to guaruntee the relationship `start <= end`.
 
     Interval(const Poco::Timestamp& center, const Poco::Timespan& timespan);
-        ///< Interval represents a timespan defined by two timestamps.
+        ///< \brief Creates an Interval from the center.
+        ///< \param center is the center of the interval.
+        ///< \param timespan is the total duration of the interval.  The
+        ///< relationship `start == center - timespan / 2` and `end == center +
+        ///< timespan / 2` is enforced.
 
     virtual ~Interval();
-        ///< Destroys the Interval.
+        ///< \brief Destroys the Interval.
 
-    void set(const Poco::Timestamp& minimum, const Poco::Timestamp& maximum);
-        ///< Sets the Interval bounds.
-        ///< If minimum is not <= maximum, the two values are swapped to
-        ///< guarantee that minimum <= maximum.
+    void set(const Poco::Timestamp& start, const Poco::Timestamp& end);
+        ///< \brief Sets the Interval bounds.
+        ///< \param start is starting timestamp.
+        ///< \param end is the ending timestamp.
+        ///< \note If `start > end`, the `start` and `end` are
+        ///< swapped to guaruntee the relationship `start <= end`.
 
     void setFromCenter(const Poco::Timestamp& center,
                        const Poco::Timespan& timespan);
-        ///< Sets the Interval from the center.
-        ///< The minimum value becomes center - timespan / 2.
-        ///< The maximum value becomes center + timespan / 2.
+        ///< \brief Sets the Interval from the center.
+        ///< \param center is the center of the interval.
+        ///< \param timespan is the total duration of the interval.  The
+        ///< relationship `start == center - timespan / 2` and `end == center +
+        ///< timespan / 2` is enforced.
 
     Poco::Timestamp getStart() const;
-        ///< Returns the Interval beginning.
+        ///< \returns the Interval start timestamp.
 
     Poco::Timestamp getEnd() const;
-        ///< Returns the Interval end.
+        ///< \returns the Interval end timestamp.
 
     Poco::Timestamp lerp(float amount, bool clamp = true) const;
-        ///< Return a Poco::Timestamp corresponding to a linear mapping
-        ///< where 0 == minimum and 1 == maximum.  When clamping is == true,
-        ///< input amounts are clamped from 0-1, ensuring that the returned
-        ///< values stay within Interval.
+        ///< \brief Return a linearly interpolated timestamp.
+        ///< \param amount usually [0, 1], where 0 == start and 1 == end.
+        ///< \param clamp clamps amount in the range 0 <= amount <= 1.
+        ///< \returns the linearly mapped timestamp.
 
     float map(const Poco::Timestamp& time, bool clamp = true) const;
         ///< Return a floating point representing a linear mapping
-        ///< where minimum = 0 and maximum = 1.  When clamping is == true,
-        ///< input times are clamped from minimum to maximum, ensuring that
+        ///< where start = 0 and end = 1.  When clamping is == true,
+        ///< input times are clamped from start to end, ensuring that
         ///< the returned values stay within a 0-1 Interval.
 
     float normalize(const Poco::Timestamp& time) const;
-        ///< Converts the given timestamp to a 0-1 Interval, where 0 == minimum
-        ///< and 1 == maximum.  Equivaluent to calling map() with clamp == true.
+        ///< Converts the given timestamp to a 0-1 Interval, where 0 == start
+        ///< and 1 == end.  Equivaluent to calling map() with clamp == true.
 
     Poco::Timespan getTimespan() const;
-        ///< Returns the Poco::Timespan represented by maximum - minimum;
+        ///< Returns the Poco::Timespan represented by end - start;
 
     bool contains(const Poco::Timestamp& timestamp) const;
         ///< Returns true iff the given Poco::Timestamp is contained within
@@ -118,20 +130,20 @@ public:
         ///< are not exactly equal to the endpoints of this Interval.
 
     bool operator >  (const Interval& other) const;
-        ///< Returns true iff the minimum is greater
-        ///< than the given Interval's minimum.
+        ///< Returns true iff the start is greater
+        ///< than the given Interval's start.
 
     bool operator >= (const Interval& other) const;
-        ///< Returns true iff the minimum is greater than
-        ///< or equal to the given Interval's minimum.
+        ///< Returns true iff the start is greater than
+        ///< or equal to the given Interval's start.
 
     bool operator <  (const Interval& other) const;
-        ///< Returns true iff the minimum is less
-        ///< than the given Interval's minimum.
+        ///< Returns true iff the start is less
+        ///< than the given Interval's start.
 
     bool operator <= (const Interval& other) const;
-        ///< Returns true iff the minimum is less than
-        ///< or equal to the given Interval's minimum.
+        ///< Returns true iff the start is less than
+        ///< or equal to the given Interval's start.
 
     static bool intersects(const Interval& interval0, const Interval& interval1);
         ///< Returns true iff the Interval0  is completely contained within the
@@ -139,23 +151,23 @@ public:
 
     static Poco::Timestamp lerp(const Interval& interval, float amount, bool clamp = true);
         ///< Return a Poco::Timestamp corresponding to a linear mapping in
-        ///< the given Interval where 0 == minimum and 1 == maximum.
+        ///< the given Interval where 0 == start and 1 == end.
         ///< When clamping is == true, input amounts are clamped from 0-1,
         ///< ensuring that the returned values stay within Interval.
 
     static float map(const Interval& interval, const Poco::Timestamp& time, bool clamp = true);
         ///< Return a floating point representing a linear mapping of Interval
-        ///< where minimum = 0 and maximum = 1.  When clamping is == true,
-        ///< input times are clamped from minimum to maximum, ensuring that
+        ///< where start = 0 and end = 1.  When clamping is == true,
+        ///< input times are clamped from start to end, ensuring that
         ///< the returned values stay within a 0-1 Interval.
 
     static float normalize(const Interval& interval, const Poco::Timestamp& time);
-        ///< Converts the given timestamp to a 0-1 Interval, where 0 == minimum
-        ///< and 1 == maximum.  Equivaluent to calling map() with clamp == true.
+        ///< Converts the given timestamp to a 0-1 Interval, where 0 == start
+        ///< and 1 == end.  Equivaluent to calling map() with clamp == true.
 
 private:
-    Poco::Timestamp _minimum; ///< The minimum value of the Interval.
-    Poco::Timestamp _maximum; ///< The maximum value of the Interval.
+    Poco::Timestamp _start; ///< The start value of the Interval.
+    Poco::Timestamp _end; ///< The end value of the Interval.
 
 };
 

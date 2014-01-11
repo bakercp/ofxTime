@@ -31,30 +31,30 @@ namespace Time {
     
 
 Interval::Interval():
-    _minimum(0),
-    _maximum(0)
+    _start(0),
+    _end(0)
 {
 }
 
 
 Interval::Interval(const Poco::Timestamp& min, const Poco::Timestamp& max):
-    _minimum(min),
-    _maximum(max)
+    _start(min),
+    _end(max)
 {
-    if (_minimum > _maximum)
+    if (_start > _end)
     {
-        std::swap(_minimum, _maximum);
+        std::swap(_start, _end);
     }
 }
 
 
 Interval::Interval(const Poco::Timestamp& center, const Poco::Timespan& timespan):
-    _minimum(center - timespan.totalMicroseconds() / 2),
-    _maximum(center + timespan.totalMicroseconds() / 2)
+    _start(center - timespan.totalMicroseconds() / 2),
+    _end(center + timespan.totalMicroseconds() / 2)
 {
-    if (_minimum > _maximum)
+    if (_start > _end)
     {
-        std::swap(_minimum, _maximum);
+        std::swap(_start, _end);
     }
 }
 
@@ -64,39 +64,39 @@ Interval::~Interval()
 }
 
 
-void Interval::set(const Poco::Timestamp& minimum, const Poco::Timestamp& maximum)
+void Interval::set(const Poco::Timestamp& start, const Poco::Timestamp& end)
 {
-    _minimum = minimum;
-    _maximum = maximum;
+    _start = start;
+    _end = end;
 
-    if (_minimum > _maximum)
+    if (_start > _end)
     {
-        std::swap(_minimum, _maximum);
+        std::swap(_start, _end);
     }
 }
 
 
 void Interval::setFromCenter(const Poco::Timestamp& center, const Poco::Timespan& timespan)
 {
-    _minimum = (center - timespan.totalMicroseconds() / 2);
-    _maximum = (center + timespan.totalMicroseconds() / 2);
+    _start = (center - timespan.totalMicroseconds() / 2);
+    _end = (center + timespan.totalMicroseconds() / 2);
 
-    if (_minimum > _maximum)
+    if (_start > _end)
     {
-        std::swap(_minimum, _maximum);
+        std::swap(_start, _end);
     }
 }
 
 
 Poco::Timestamp Interval::getStart() const
 {
-    return _minimum;
+    return _start;
 }
 
 
 Poco::Timestamp Interval::getEnd() const
 {
-    return _maximum;
+    return _end;
 }
 
 
@@ -120,13 +120,13 @@ float Interval::normalize(const Poco::Timestamp& time) const
 
 Poco::Timespan Interval::getTimespan() const
 {
-    return Poco::Timespan(_maximum - _minimum);
+    return Poco::Timespan(_end - _start);
 }
 
 
 bool Interval::contains(const Poco::Timestamp& timestamp) const
 {
-    return (timestamp <= _maximum && timestamp >= _minimum);
+    return (timestamp <= _end && timestamp >= _start);
 }
 
 
@@ -153,37 +153,37 @@ bool Interval::intersects(const Interval& interval0, const Interval& interval1)
 
 bool Interval::operator == (const Interval& other) const
 {
-    return (_minimum == other._minimum) && (_maximum == other._maximum);
+    return (_start == other._start) && (_end == other._end);
 }
 
 
 bool Interval::operator != (const Interval& other) const
 {
-    return (_minimum != other._minimum) || (_maximum != other._maximum);
+    return (_start != other._start) || (_end != other._end);
 }
     
 
 bool Interval::operator >  (const Interval& other) const
 {
-    return _minimum > other._minimum;
+    return _start > other._start;
 }
 
 
 bool Interval::operator >= (const Interval& other) const
 {
-    return _minimum >= other._minimum;
+    return _start >= other._start;
 }
 
 
 bool Interval::operator <  (const Interval& other) const
 {
-    return _minimum < other._minimum;
+    return _start < other._start;
 }
 
 
 bool Interval::operator <= (const Interval& other) const
 {
-    return _minimum <= other._minimum;
+    return _start <= other._start;
 }
 
 
