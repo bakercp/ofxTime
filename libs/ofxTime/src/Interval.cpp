@@ -37,9 +37,20 @@ Interval::Interval():
 }
 
 
-Interval::Interval(const Poco::Timestamp& min, const Poco::Timestamp& max):
-    _start(min),
-    _end(max)
+Interval::Interval(const Poco::Timestamp& start, const Poco::Timestamp& end):
+    _start(start),
+    _end(end)
+{
+    if (_start > _end)
+    {
+        std::swap(_start, _end);
+    }
+}
+
+
+Interval::Interval(const Poco::DateTime& start, const Poco::DateTime& end):
+    _start(start.timestamp()),
+    _end(end.timestamp())
 {
     if (_start > _end)
     {

@@ -27,6 +27,7 @@
 
 
 #include <iostream>
+#include "Poco/DateTime.h"
 #include "Poco/Timestamp.h"
 #include "Poco/Timespan.h"
 
@@ -56,6 +57,13 @@ public:
         ///< \brief Creates an Interval with a start and a end Poco::Timestamp.
         ///< \param start is starting timestamp.
         ///< \param end is the ending timestamp.
+        ///< \note If `start > end`, the `start` and `end` are
+        ///< swapped to guaruntee the relationship `start <= end`.
+
+    Interval(const Poco::DateTime& start, const Poco::DateTime& end);
+        ///< \brief Creates an Interval with a start and a end Poco::DateTime.
+        ///< \param start is starting datetime.
+        ///< \param end is the ending datetime.
         ///< \note If `start > end`, the `start` and `end` are
         ///< swapped to guaruntee the relationship `start <= end`.
 
