@@ -9,11 +9,11 @@ Can deal with date ranges.
 
 Can deal with periods, instants, intervals, etc.
 
-![Screenshot](https://github.com/bakercp/ofxTime/raw/master/example/screen.png)
+![Screenshot](https://raw.githubusercontent.com/bakercp/ofxTime/master/example/screen.png)
 
 An example of interpolation.
 
-![Screenshot](https://github.com/bakercp/ofxTime/raw/master/example_rounding/screen.png)
+![Screenshot](https://raw.githubusercontent.com/bakercp/ofxTime/master/example_rounding/screen.png)
 
 An example of rounding.
 
