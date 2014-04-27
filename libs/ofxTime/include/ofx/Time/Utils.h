@@ -44,33 +44,40 @@ namespace ofx {
 namespace Time {
 
 
-// TODO: round to period fields
+/// \brief This class contains a collection of utilities for manipulating
+///         Poco::DateTime, Poco::LocalDateTime and Poco::Timestamp.
+///
+/// Rounding dates and times is timezone dependent.  When dates and times
+/// must be rounded with respect to a specific timezone, the Poco::Timestamp
+/// or Poco::DateTime should be converted to a Poco::LocalDateTime before
+/// rounding.  The UTC equivalent of a Poco::LocalDateTime can then be
+/// extracted using the toUtcTimestamp() or toUtcDateTime() functions.
+///
+/// Notes:
+///   - Negative years (years preceding 1 BC) are not supported, thus
+///     "truncation" (floor toward zero) is not supported.
+///
+/// For more information, please see:
+///   - http://pocoproject.org/docs/Poco.Timestamp.html
+///   - http://pocoproject.org/docs/Poco.DateTime.html
+///   - http://pocoproject.org/docs/Poco.LocalDateTime.html
+///
+/// \todo round to period fields
 class Utils
-    // This class contains a collection of utilities for manipulating
-    // Poco::DateTime, Poco::LocalDateTime and Poco::Timestamp.
-    //
-    // Rounding dates and times is timezone dependent.  When dates and times
-    // must be rounded with respect to a specific timezone, the Poco::Timestamp
-    // or Poco::DateTime should be converted to a Poco::LocalDateTime before
-    // rounding.  The UTC equivalent of a Poco::LocalDateTime can then be
-    // extracted using the toUtcTimestamp() or toUtcDateTime() functions.
-    //
-    // Notes:
-    //   * Negative years (years preceding 1 BC) are not supported, thus "truncation" (floor toward zero) is not supported.
-    //
-    // For more information, please see:
-    //   * http://pocoproject.org/docs/Poco.Timestamp.html
-    //   * http://pocoproject.org/docs/Poco.DateTime.html
-    //   * http://pocoproject.org/docs/Poco.LocalDateTime.html
 {
 public:
+    /// \brief Generate instances given known start and stop times.
+    ///
+    /// Get a fixed number of instances beginning with the "start" time.
+    /// Increments are defined by a Period.
+    ///
+    /// \param start The starting time.
+    /// \param numInstances The number of instances to get.
+    /// \param period The instance increment size.
+    /// \returns a vector of time stamps.
     static std::vector<Poco::Timestamp> getInstances(const Poco::Timestamp& start,
                                                      std::size_t numInstances,
                                                      const Period& period);
-        ///<
-        ///< @brief Generate instances given known start and stop times.
-        ///< Get a fixed number of instances beginning with the "start" time.
-        ///< Increments are defined by a Period.
 
 
     static std::vector<Poco::Timestamp> getInstances(const Poco::Timestamp& start,
