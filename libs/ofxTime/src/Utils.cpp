@@ -24,11 +24,11 @@
 
 
 #include "ofx/Time/Utils.h"
+#include "Poco/Exception.h"
 
 
 namespace ofx {
 namespace Time {
-
 
 
 std::vector<Poco::Timestamp> Utils::getInstances(const Poco::Timestamp& start,
