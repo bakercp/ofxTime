@@ -104,12 +104,12 @@ void ofApp::draw()
     // draw range0
     ofFill();
     ofSetColor(ofColor::yellow, 80);
-    ofRectRounded(0, 0, ofGetWidth() / 4, ofGetHeight(), 5);
+    ofDrawRectRounded(0, 0, ofGetWidth() / 4, ofGetHeight(), 5);
 
     // draw range1
     ofFill();
     ofSetColor(ofColor::red, 80);
-    ofRectRounded(0, y0, ofGetWidth() / 4, y1 - y0, 5);
+    ofDrawRectRounded(0, y0, ofGetWidth() / 4, y1 - y0, 5);
 
     // get the range boundaries as formatted strings
     std::string range0Min = Utils::format(interval0.getStart());
@@ -125,7 +125,7 @@ void ofApp::draw()
 
     // draw a line based on the cursor position
     ofSetColor(255);
-    ofLine(0, ofGetMouseY(), ofGetWidth(), ofGetMouseY());
+    ofDrawLine(0, ofGetMouseY(), ofGetWidth(), ofGetMouseY());
 
     // calculate the noramlized cursor position
     float normalizedMousePosition = ofGetMouseY() / (float)ofGetHeight();
