@@ -25,11 +25,9 @@
 
 #pragma once
 
+
 #include "ofMain.h"
 #include "ofxTime.h"
-
-
-using namespace ofx::Time;
 
 
 class ofApp: public ofBaseApp
