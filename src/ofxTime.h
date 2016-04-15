@@ -33,3 +33,6 @@
 #include "ofx/Time/Interval.h"
 #include "ofx/Time/Period.h"
 #include "ofx/Time/Utils.h"
+
+
+namespace ofxTime = ofx::Time;
