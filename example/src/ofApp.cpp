@@ -82,10 +82,10 @@ void ofApp::setup()
     interval0.set(min0.timestamp(), max0.timestamp());
     interval1.set(min1.timestamp(), max1.timestamp());
 
-    std::string range0Min = Utils::format(interval0.getStart());
-    std::string range0Max = Utils::format(interval0.getEnd());
-    std::string range1Min = Utils::format(interval1.getStart());
-    std::string range1Max = Utils::format(interval1.getEnd());
+    std::string range0Min = ofxTime::Utils::format(interval0.getStart());
+    std::string range0Max = ofxTime::Utils::format(interval0.getEnd());
+    std::string range1Min = ofxTime::Utils::format(interval1.getStart());
+    std::string range1Max = ofxTime::Utils::format(interval1.getEnd());
 
     ofLogNotice("ofApp::setup()") << "range0: " << range0Min << " - " << range0Max;
     ofLogNotice("ofApp::setup()") << "range1: " << range1Min << " - " << range1Max;
@@ -98,8 +98,17 @@ void ofApp::draw()
     ofBackgroundGradient(ofColor::white, ofColor::black);
 
     // get the screen Y values of range1
-    float y0 = ofMap(interval1.getStart().utcTime(), interval0.getStart().utcTime(), interval0.getEnd().utcTime(), 0, ofGetHeight());
-    float y1 = ofMap(interval1.getEnd().utcTime(), interval0.getStart().utcTime(), interval0.getEnd().utcTime(), 0, ofGetHeight());
+    float y0 = ofMap(interval1.getStart().utcTime(),
+                     interval0.getStart().utcTime(),
+                     interval0.getEnd().utcTime(),
+                     0,
+                     ofGetHeight());
+
+    float y1 = ofMap(interval1.getEnd().utcTime(),
+                     interval0.getStart().utcTime(),
+                     interval0.getEnd().utcTime(),
+                     0,
+                     ofGetHeight());
 
     // draw range0
     ofFill();
@@ -112,10 +121,10 @@ void ofApp::draw()
     ofDrawRectRounded(0, y0, ofGetWidth() / 4, y1 - y0, 5);
 
     // get the range boundaries as formatted strings
-    std::string range0Min = Utils::format(interval0.getStart());
-    std::string range0Max = Utils::format(interval0.getEnd());
-    std::string range1Min = Utils::format(interval1.getStart());
-    std::string range1Max = Utils::format(interval1.getEnd());
+    std::string range0Min = ofxTime::Utils::format(interval0.getStart());
+    std::string range0Max = ofxTime::Utils::format(interval0.getEnd());
+    std::string range1Min = ofxTime::Utils::format(interval1.getStart());
+    std::string range1Max = ofxTime::Utils::format(interval1.getEnd());
 
     // draw the range boundaries
     ofDrawBitmapStringHighlight(range0Min, ofVec2f(ofGetWidth() / 4, + 14));
@@ -134,7 +143,7 @@ void ofApp::draw()
     Poco::Timestamp ts = interval0.lerp(normalizedMousePosition);
 
     // formate the interpolated date to a string
-    std::string ts0 = Utils::format(ts);
+    std::string ts0 = ofxTime::Utils::format(ts);
 
     // draw the interpolated date
     ofDrawBitmapStringHighlight(ts0, ofVec2f(ofGetWidth() / 4, ofGetMouseY()));

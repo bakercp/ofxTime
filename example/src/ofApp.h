@@ -30,16 +30,13 @@
 #include "ofxTime.h"
 
 
-using namespace ofx::Time;
-
-
 class ofApp: public ofBaseApp
 {
 public:
     void setup();
     void draw();
 
-    Interval interval0;
-    Interval interval1;
+    ofxTime::Interval interval0;
+    ofxTime::Interval interval1;
 
 };
