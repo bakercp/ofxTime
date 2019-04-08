@@ -23,6 +23,8 @@
 // =============================================================================
 
 
+
+#include "Poco/Exception.h"
 #include "Poco/Timestamp.h"
 #include "Poco/Timespan.h"
 #include "Poco/DateTime.h"
