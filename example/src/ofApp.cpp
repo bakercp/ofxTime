@@ -109,10 +109,10 @@ void ofApp::draw()
     std::string range1Max = ofxTime::Utils::format(interval1.getEnd());
 
     // draw the range boundaries
-    ofDrawBitmapStringHighlight(range0Min, ofVec2f(ofGetWidth() / 4, + 14));
-    ofDrawBitmapStringHighlight(range0Max, ofVec2f(ofGetWidth() / 4, ofGetHeight()));
-    ofDrawBitmapStringHighlight(range1Min, ofVec2f(ofGetWidth() / 4, y0));
-    ofDrawBitmapStringHighlight(range1Max, ofVec2f(ofGetWidth() / 4, y1));
+    ofDrawBitmapStringHighlight(range0Min, ofGetWidth() / 4, + 14);
+    ofDrawBitmapStringHighlight(range0Max, ofGetWidth() / 4, ofGetHeight());
+    ofDrawBitmapStringHighlight(range1Min, ofGetWidth() / 4, y0);
+    ofDrawBitmapStringHighlight(range1Max, ofGetWidth() / 4, y1);
 
     // draw a line based on the cursor position
     ofSetColor(255);
@@ -128,6 +128,6 @@ void ofApp::draw()
     std::string ts0 = ofxTime::Utils::format(ts);
 
     // draw the interpolated date
-    ofDrawBitmapStringHighlight(ts0, ofVec2f(ofGetWidth() / 4, ofGetMouseY()));
+    ofDrawBitmapStringHighlight(ts0, ofGetWidth() / 4, ofGetMouseY());
 
 }

@@ -15,8 +15,8 @@
 class ofApp: public ofBaseApp
 {
 public:
-    void setup();
-    void draw();
+    void setup() override;
+    void draw() override;
 
     ofxTime::Interval interval0;
     ofxTime::Interval interval1;

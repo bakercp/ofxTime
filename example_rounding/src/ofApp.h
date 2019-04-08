@@ -15,6 +15,6 @@
 class ofApp: public ofBaseApp
 {
 public:
-    void draw();
+    void draw() override;
 
 };

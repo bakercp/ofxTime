@@ -88,9 +88,9 @@ Poco::DateTime Utils::add(const Poco::DateTime& timez, const Period& period)
 {
     Poco::DateTime dateTime = timez;
 
-    for (int i = (int)(Period::NUM_FIELDS - 1); i > -1; --i)
+    for (int i = int(Period::NUM_FIELDS) - 1; i > -1; --i)
     {
-        Period::Field field = (Period::Field)i;
+        Period::Field field = Period::Field(i);
 
         int64_t amount = period.get(field);
 

@@ -53,7 +53,7 @@ void ofApp::draw()
     ss << setw(w) <<   "MINUTES: " << ofxTime::Utils::format(ofxTime::Utils::round(nowLocal, Poco::Timespan::MINUTES), fmt) << endl;
     ss << setw(w) <<     "HOURS: " << ofxTime::Utils::format(ofxTime::Utils::round(nowLocal, Poco::Timespan::HOURS), fmt) << endl;
     ss << setw(w) <<      "DAYS: " << ofxTime::Utils::format(ofxTime::Utils::round(nowLocal, Poco::Timespan::DAYS), fmt) << endl;
-    
+
     ss << endl;
 
     Poco::LocalDateTime future = nowLocal + ofxTime::Period::Year();
@@ -62,5 +62,5 @@ void ofApp::draw()
 
     ss << endl;
 
-    ofDrawBitmapStringHighlight(ss.str(), ofVec2f(30,30));
+    ofDrawBitmapStringHighlight(ss.str(), 30, 30);
 }
